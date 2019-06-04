@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-image: url(bg.jpg); background-size: 100%">
+
+	<h1 sty>Враг</h1>
+	<script type="text/javascript">
+		let array = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png"]
+
+
+		let getRandom = function(){
+			let rand = Math.random()*4
+			let round = Math.round(rand)
+			return round;
+		}
+		getRandom()+getRandom()
+
+		let cardRandom = function(){
+			let rand = Math.random()*10
+			let round = Math.round(rand)
+			return round
+		}
+		cardRandom()+cardRandom()
+
+
+		let createEnemyCard = function(arg){
+			for(let i = 0; i<arg; i = i + 1){
+				let karta = document.createElement("img")
+				document.body.appendChild(karta);
+				karta.src = array[cardRandom()];
+				karta.style.height = "200px";
+				karta.style.width = "140p";
+
+
+			}
+		}
+		createEnemyCard(0)
+
+
+	</script>
+</body>
+</html>
+
+
+
